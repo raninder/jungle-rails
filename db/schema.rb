@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160625062916) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
-
+vagrant
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
 
