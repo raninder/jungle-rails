@@ -1,0 +1,14 @@
+<h1>Signup!</h1>
+
+<%#  create a form using the create method within the user controller and 
+submit it to the URL login_path defined in config/routes.rb” %>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+
+<% end %>

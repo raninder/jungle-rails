@@ -1,0 +1,11 @@
+<h1>Login</h1>
+
+<%# form_tag is used for basic forms that are not attached to a specific Controller#action,
+need to specify path  where to send the user submissions %>
+<%= form_tag '/login' do %>
+
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
