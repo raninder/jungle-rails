@@ -19,7 +19,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
   scenario "They can navigate from the home page to the product detail page" do
     visit root_path
     first('.product').click_link('Details')  # or click_link 'Details' if rendering only one product 
-    
+
     # DEBUG / VERIFY
     expect(page).to have_css 'article.product-detail'  # or expect(page).to have_content('Description')
     
