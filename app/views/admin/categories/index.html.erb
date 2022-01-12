@@ -6,8 +6,10 @@
 
   <div class="categories ">
   <%# can use render @categories also,shorter version %>
-        <% @category.each do |item|%>    
+        <% @category.each do |item|%>  
+        <div class="category" >  
         <%= render 'item', category: item %>
+        </div>
         <% end %>
 
   </div>
