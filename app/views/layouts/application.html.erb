@@ -8,9 +8,11 @@
 </head>
 <body>
 
-  <%= render 'layouts/top_nav' %>
    <main class="container">
-  
+  <% if flash.now[:alert] %>
+    <div class="alert alert-danger"><%= flash.now[:alert] %></div>
+  <% end %>
+  <%= render 'layouts/top_nav' %>
 <% if current_user %>
   Signed in as <%= "#{current_user.email}" %> | <%= link_to "Logout", '/logout' %>
 <% else %>

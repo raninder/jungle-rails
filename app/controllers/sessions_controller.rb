@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # calling method defined in user contoller
+   
     user = User.authenticate_with_credentials(params[:email], params[:password])
     if(user)
       # Save the user id inside the browser cookie. 
@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
     else
     # If user's login doesn't work, send them back to the login form.
       # flash.now.alert = "Email or password is invalid"
-      flash[:alert] = "Email or password is invalid"
+      flash.now[:alert] = "Email or password is invalid"
+      # puts "...............hi................"
       redirect_to '/login'
     end
   end
